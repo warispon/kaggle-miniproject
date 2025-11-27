@@ -1,6 +1,15 @@
+#สร้าง virtual environment
 python -m venv .venv
+#activate venv
 .venv\Scripts\activate #window
 source .venv/bin/activate #Mac/linux
+#install library ของโปรเจกต์
 pip install -r requirements.txt
+#docker compose
 docker-compose up -d
+#run 
 python run_pipeline.py
+
+1️⃣ INGEST : อ่าน data.csv → โหลดเข้า PostgreSQL
+2️⃣ TRANSFORM : Clean / สร้างข้อมูลใหม่ → เขียนลง schema production
+3️⃣ PUBLISH : ส่งข้อมูลทั้งหมดไป Google Sheets
